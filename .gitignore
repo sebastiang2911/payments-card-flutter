@@ -32,6 +32,11 @@ migrate_working_dir/
 .pub/
 /build/
 
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+
 # Symbolication related
 app.*.symbols
 

@@ -1,15 +1,16 @@
 # stripe_app
 
-For local testing, provide Stripe keys without committing them:
+## Variables de entorno
+
+Copia la plantilla y completa las claves locales:
 
 ```sh
-flutter run \
-  --dart-define=STRIPE_PUBLISHABLE_KEY=pk_test_your_key \
-  --dart-define=STRIPE_SECRET_KEY=sk_test_your_key
+cp .env.example .env
+flutter run --dart-define-from-file=.env
 ```
 
-Never ship `STRIPE_SECRET_KEY` in a client application. Create PaymentIntents
-on a trusted backend before using this project in production.
+`.env` está excluido de Git. Nunca distribuyas `STRIPE_SECRET_KEY` dentro de la
+aplicación; crea los PaymentIntents desde un backend seguro antes de producción.
 
 A new Flutter project.
 
